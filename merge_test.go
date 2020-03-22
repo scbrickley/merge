@@ -114,4 +114,3 @@ func TestMergeSort(t *testing.T) {
 		t.Errorf("Got: %v %c", sorted, ballotX)
 	}
 }
-

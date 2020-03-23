@@ -44,8 +44,6 @@ func merge(left []int, right []int) []int {
 	return merged
 }
 
-// recursively split a list of integers into a list of lists.
-// where each inner list has a length of 1
 func split(nums []int) ([]int, []int) {
 	mid := len(nums) / 2
 

@@ -8,8 +8,9 @@ import (
 // ┃┃┃┣╸ ┣┳┛┃╺┓┣╸    ┗━┓┃ ┃┣┳┛ ┃    ┃┃┗┫   ┃╺┓┃ ┃┃  ┣━┫┃┗┫┃╺┓
 // ╹ ╹┗━╸╹┗╸┗━┛┗━╸   ┗━┛┗━┛╹┗╸ ╹    ╹╹ ╹   ┗━┛┗━┛┗━╸╹ ╹╹ ╹┗━┛
 
-func mergeSort(list []int) []int {
+func MergeSort(list []int) []int {
 	left, right := split(list)
+	print("%v %v", left, right)
 	if len(left) > 1 {
 		left = mergeSort(left)
 	}
@@ -26,7 +27,7 @@ func merge(left []int, right []int) []int {
 	// If the last element of the left array is smaller than the first
 	// element of the right array, assuming both are already sorted,
 	// there is nothing left to do.
-	if left[len(left)-1] < right [0] {
+	if left[len(left)-1] < right[0] {
 		return append(left, right...)
 	}
 	merged := []int{}
@@ -54,7 +55,7 @@ func split(nums []int) ([]int, []int) {
 
 func remove(index int, list *[]int) (int, error) {
 	templist := *list
-	if index > len(templist) - 1 {
+	if index > len(templist)-1 {
 		return 0, errors.New("Index out of bounds")
 	}
 	removed := templist[index]

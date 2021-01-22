@@ -10,13 +10,12 @@ import (
 
 func MergeSort(list []int) []int {
 	left, right := split(list)
-	print("%v %v", left, right)
 	if len(left) > 1 {
-		left = mergeSort(left)
+		left = MergeSort(left)
 	}
 
 	if len(right) > 1 {
-		right = mergeSort(right)
+		right = MergeSort(right)
 	}
 
 	return merge(left, right)

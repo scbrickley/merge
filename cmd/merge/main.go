@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/scbrickley/merge"
+)
+
 func main() {
 	nums := []int{
 		50,
@@ -14,5 +20,8 @@ func main() {
 		2,
 		5,
 	}
-	merge.mergeSort(nums)
+
+	fmt.Printf("Start: %v\n", nums)
+	sorted := merge.MergeSort(nums)
+	fmt.Printf("Finish: %v\n", sorted)
 }
